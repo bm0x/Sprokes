@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ordenes de Servicio</title>
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <h1>Ordenes de Servicio</h1>
+    <form>
+      <label for="numero">Número:</label>
+      <input type="text" id="numero" name="numero" required>
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+      <label for="garantia">Garantía:</label>
+      <select id="garantia" name="garantia" required>
+        <option value="">Seleccione una opción</option>
+        <option value="legal">Garantía Legal</option>
+        <option value="fabricante">Garantía con Fabricante</option>
+        <option value="No Corresponde">No Corresponde</option> <!-- No corresponde a garantía -->
+      </select>
+      <label for="garantia">Énvios de Mercaderia (Bodega):</label>
+      <select name="mercaderia" id="mercaderia" required>
+        <option value="">Seleccione una opción</option>
+        <option value="Corporativa">Envio Corporativo</option>
+        <option value="Dañada">Envío de Mercadería Dañado</option>
+        <option value="No Corresponde">No Corresponde</option>
+      </select>
+      <button type="submit">Guardar</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Número</th>
+          <th>Fecha</th>
+          <th>Garantía</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se mostrarán las filas de las órdenes de servicio -->
+      </tbody>
+    </table>
+    <button id="generar-planilla">Generar Planilla</button>
+    <script src="js/api-orden.js"></script>
+    <script src="js/react-orden.js"></script>
+    <script src="js/react-mercaderia.js"></script>
+  </body>
+</html>
